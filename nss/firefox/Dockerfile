@@ -45,7 +45,6 @@ WORKDIR /
 
 RUN git clone https://github.com/wolfSSL/wolfPKCS11.git
 WORKDIR /wolfPKCS11
-RUN git checkout nss
 RUN autoreconf -if
 RUN ./configure --enable-rsa --enable-rsaoaep --enable-rsapss --enable-keygen --enable-ecc \
     --enable-dh --enable-aes --enable-aeskeywrap --enable-aescbc --enable-aesgcm --enable-aesctr \
