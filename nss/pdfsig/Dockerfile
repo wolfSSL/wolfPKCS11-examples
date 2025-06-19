@@ -77,7 +77,6 @@ RUN git clone https://github.com/wolfSSL/wolfssl.git && \
 WORKDIR /opt/wolfpkcs11
 RUN git clone https://github.com/wolfSSL/wolfPKCS11.git && \
     cd wolfPKCS11 && \
-    git checkout nss && \
     ./autogen.sh && \
     ./configure --enable-debug --enable-nss --enable-aesecb --enable-aesctr --enable-aesccm --enable-aescmac CFLAGS="-D_GNU_SOURCE" && \
     make && \
